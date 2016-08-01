@@ -13,7 +13,7 @@ name                     : "Adam Weiss"
 description              : "A personal site about Adam Weiss, software development, and leadership."
 url                      : "http://adamweiss.me"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-gh_repo                  :
+gh_repo                  : "https://github.com/amweiss/amweiss.github.io"
 teaser                   : "placeholder.jpg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
