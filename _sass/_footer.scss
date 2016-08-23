@@ -37,12 +37,13 @@
     text-decoration: none;
 
     &:hover {
+      color: $accent-color;
       text-decoration: underline;
     }
   }
 
   .fa {
-    color: mix(#fff, $gray, 25%);
+    color: inherit;
   }
 }
 
