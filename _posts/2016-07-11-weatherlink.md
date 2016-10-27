@@ -30,7 +30,7 @@ I'm going to highlight some of the parts I found interesting, but the whole sour
 
 ### Program
 
-Those of your familiar with running ASP.NET in IIS will be somewhat surprise by [`Program.cs`](https://github.com/amweiss/WeatherLink/blob/master/Program.cs)
+Those of your familiar with running ASP.NET in IIS will be somewhat surprise by [`Program.cs`](https://github.com/amweiss/WeatherLink/blob/master/src/WeatherLink/Program.cs)
 
 ```cs
 public static void Main(string[] args)
@@ -54,7 +54,7 @@ public static void Main(string[] args)
 
 I have `UseKestrel()` as well as `UseIISIntegration()`. This is due to running the services on [Azure](https://azure.microsoft.com/en-us/).
 Even though I was using the self-hosted [Kestrel](https://github.com/aspnet/KestrelHttpServer) server, IIS Integration has to be enabled for Azure to serve the content.
-You can also see [`Startup`](https://github.com/amweiss/WeatherLink/blob/master/Startup.cs) referenced here and that's where more of the new fun shows up.
+You can also see [`Startup`](https://github.com/amweiss/WeatherLink/blob/master/src/WeatherLink/Startup.cs) referenced here and that's where more of the new fun shows up.
 {: .notice--info}
 
 ### Startup
@@ -142,7 +142,7 @@ This sets up [logging](https://docs.asp.net/en/latest/fundamentals/logging.html)
 
 ## Organization
 
-Below the top level files already discussed there are a few others, [project.json](https://github.com/amweiss/WeatherLink/blob/master/project.json), [Dockerfile](https://github.com/amweiss/WeatherLink/blob/master/Dockerfile), etc. More interestingly is the `src` directory. Inside that is where all the rest of the program source code is.
+Below the top level files already discussed there are a few others, [project.json](https://github.com/amweiss/WeatherLink/blob/master/src/WeatherLink/project.json), [Dockerfile](https://github.com/amweiss/WeatherLink/blob/master/src/WeatherLink/Dockerfile), etc. More interestingly is the `src` directory. Inside that is where all the rest of the program source code is.
 
 ### Models
 
@@ -170,7 +170,7 @@ Now we get to the really fun part, the services. Following [standard naming conv
 
 #### Geocoding
 
-[`GoogleMapsGeocodeService`](https://github.com/amweiss/WeatherLink/blob/master/src/Services/GoogleMapsGeocodeService.cs) uses the [Google Maps API](https://developers.google.com/maps/) to convert a string into a latitude and longitude. It does the processing with the ever popular [Json.NET](http://www.newtonsoft.com/json). I was lazy and just returned a `Tuple` instead of creating a geolocation model class. I also just used the `JObject` directly combined with [null-conditional operators](https://msdn.microsoft.com/en-us/library/dn986595.aspx) to follow the concept of the [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle) and be liberal in what is received. If the elements expect are present, it returns a value regardless of whatever else is returned and I barely use any of the data so I skipped creating an object for it.
+[`GoogleMapsGeocodeService`](https://github.com/amweiss/WeatherLink/blob/master/src/WeatherLink/Services/GoogleMapsGeocodeService.cs) uses the [Google Maps API](https://developers.google.com/maps/) to convert a string into a latitude and longitude. It does the processing with the ever popular [Json.NET](http://www.newtonsoft.com/json). I was lazy and just returned a `Tuple` instead of creating a geolocation model class. I also just used the `JObject` directly combined with [null-conditional operators](https://msdn.microsoft.com/en-us/library/dn986595.aspx) to follow the concept of the [Robustness principle](https://en.wikipedia.org/wiki/Robustness_principle) and be liberal in what is received. If the elements expect are present, it returns a value regardless of whatever else is returned and I barely use any of the data so I skipped creating an object for it.
 
 ```cs
 var location = responseJObject?["results"]?.First()?["geometry"]?["location"];
@@ -180,7 +180,7 @@ var recievedLongitude = location?["lng"];
 
 #### Forecasts
 
-I love [Forecast.io](https://forecast.io) and their hyper-local [API](https://developer.forecast.io/) is what powers WeatherLink's [forecast service](https://github.com/amweiss/WeatherLink/blob/master/src/Services/DarkSkyForecastService.cs). Again, the actual API call is made through [`HttpClient`](https://msdn.microsoft.com/en-us/library/system.net.http.httpclient(v=vs.110).aspx) and parsed with Json.NET.
+I love [Forecast.io](https://forecast.io) and their hyper-local [API](https://developer.forecast.io/) is what powers WeatherLink's [forecast service](https://github.com/amweiss/WeatherLink/blob/master/src/WeatherLink/Services/HourlyAndMinutelyDarkSkyService.cs). Again, the actual API call is made through [`HttpClient`](https://msdn.microsoft.com/en-us/library/system.net.http.httpclient(v=vs.110).aspx) and parsed with Json.NET.
 
 I do forcibly set the numeric format to be `N4` on the URL parameters to avoid issues, but it seemed like the DarkSky API handled it without that.
 {: .notice--info}
