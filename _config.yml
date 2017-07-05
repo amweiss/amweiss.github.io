@@ -92,8 +92,15 @@ author:
   flickr           :
   facebook         :
   foursquare       :
+<<<<<<< HEAD
   github           : "amweiss"
+  gitlab           :
   google_plus      : "AdamWeiss"
+=======
+  github           :
+  gitlab           :
+  google_plus      :
+>>>>>>> c142f94... add gitlab to author profile (#1050)
   keybase          :
   instagram        :
   lastfm           :
