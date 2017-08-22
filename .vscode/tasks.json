@@ -6,7 +6,11 @@
 		{
 			"taskName": "serve",
 			"type": "shell",
-			"command": "bundle exec jekyll serve --config _config.yml,_config.dev.yml --host localhost"
+			"command": "bundle exec jekyll serve --config _config.yml,_config.dev.yml --host localhost",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }
