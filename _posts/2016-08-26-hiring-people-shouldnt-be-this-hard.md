@@ -4,8 +4,8 @@ excerpt: Having a good interview process is hard. What can be done to make it le
 categories: leadership
 tags: advice management
 header:
-  overlay_image: headers/office-building.jpg
-  teaser: headers/office-building.jpg
+  overlay_image: /assets/images/headers/office-building.jpg
+  teaser: /assets/images/headers/office-building.jpg
   overlay_filter: 0.6
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---

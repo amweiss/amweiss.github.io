@@ -4,8 +4,8 @@ excerpt: Start small, improve, make progress.
 categories: reflection
 tags: newbie simplicity
 header:
-  overlay_image: headers/simple-desk.jpg
-  teaser: headers/simple-desk.jpg
+  overlay_image: /assets/images/headers/simple-desk.jpg
+  teaser: /assets/images/headers/simple-desk.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
@@ -51,6 +51,6 @@ You'll find that there are then two possible ways to simplify this situation.  E
 
 I hope that over time I can share some experiences here that will help others or at least be interesting stories. Sometimes I'll just share fun things like here's a picture from the [Architects of Air](http://outerharborbuffalo.com/events/event/architects-of-air-4/)
 
-![Architects of Air]({{ base_path }}/images/photos/architects-of-air.jpg)
+![Architects of Air](/assets/images/photos/architects-of-air.jpg)
 
 I appreciate [Kaizen](https://en.wikipedia.org/wiki/Kaizen) so this blog too shall change and improve over time, but for now, I'll stop rambling and invite you to check back soon.

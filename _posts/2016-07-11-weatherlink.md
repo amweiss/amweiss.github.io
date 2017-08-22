@@ -22,7 +22,7 @@ So to get started, I went with Visual Studio Code so I could see how the new too
 I went with the [Insiders](https://code.visualstudio.com/insiders) build to get an in-editor terminal and tabs, but those should land in the standard version soon if not already.
 It provides the familiar Intellisense like Visual Studio and much of the same functionality .NET developers are used to.
 
-![Intellisense](/images/images/vscode-intellisense.png){: .align-center}
+![Intellisense](/assets/images/vscode-intellisense.png){: .align-center}
 
 ## Setup
 

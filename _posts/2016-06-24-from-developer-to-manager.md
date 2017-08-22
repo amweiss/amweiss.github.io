@@ -3,7 +3,7 @@ title: From developer to manager
 categories: leadership
 tags: advice management
 header:
-  teaser: images/manager-pyramid.jpg
+  teaser: /assets/images/manager-pyramid.jpg
 ---
 
 Not everyone wants to be a manager, not everyone wants to be a developer.
@@ -14,7 +14,7 @@ My feeling has always been that a development manager should fill the gaps on th
 Sometimes this means automating a process to make life easier, reducing work in build/test/deploy pipelines, or in general handling the things the team doesn't want to do.
 
 <figure>
-	<a href="http://despair.com/products/achievement"><img src="/images/images/manager-pyramid.jpg"></a>
+	<a href="http://despair.com/products/achievement"><img src="/assets/images/manager-pyramid.jpg"></a>
 	<figcaption><a href="http://despair.com/products/achievement">Achievement, on Despair.com</a>.</figcaption>
 </figure>
 
