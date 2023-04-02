@@ -44,10 +44,10 @@ author:
   bio: Development leader with a belief that simple solutions result in better products.
   location: Buffalo, NY
   email: adam@adamweiss.me
-  twitter: amweiss
+  # twitter: amweiss
   github: amweiss
   linkedin: adammweiss
-  stackoverflow: 149866/adam-w
+  # stackoverflow: 149866/adam-w
 
 footer:
   links:
