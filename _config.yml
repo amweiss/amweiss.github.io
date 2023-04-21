@@ -17,7 +17,7 @@ og_image: /assets/img/placeholder.jpg
 analytics:
   provider               : "google"
   google:
-    tracking_id          : "UA-79187014-1"
+    tracking_id          : "G-NPDX4M1074"
 
 # Outputting
 permalink: /:categories/:title/
