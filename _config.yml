@@ -13,12 +13,6 @@ remote_theme: mmistakes/minimal-mistakes@4.24.0
 # Social Sharing
 og_image: /assets/img/placeholder.jpg
 
-# Analytics
-analytics:
-  provider               : "google"
-  google:
-    tracking_id          : "G-NPDX4M1074"
-
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
