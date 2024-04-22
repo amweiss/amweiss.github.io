@@ -6,7 +6,7 @@ search: false
 @charset "utf-8";
 
 // Customize here
-$accent-color: #00cb89;
+$primary-color: mix(#000, #00cb89, 40%);
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
