@@ -8,7 +8,7 @@ teaser: /assets/img/placeholder.jpg
 repository: amweiss/amweiss.github.io
 
 # Build settings
-remote_theme: mmistakes/minimal-mistakes@4.26.0
+remote_theme: mmistakes/minimal-mistakes@4.26.1
 
 # Social Sharing
 og_image: /assets/img/placeholder.jpg
